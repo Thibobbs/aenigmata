@@ -7,6 +7,19 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+//Modules
+import { HttpClientModule } from '@angular/common/http';
+
+//Pages
+import { WingsPage } from '../pages/wings/wings';
+import { WingsPageModule } from '../pages/wings/wings.module';
+
+//Plugins
+import { NativePageTransitions } from '@ionic-native/native-page-transitions';
+
+//Providers
+import { NavigationProvider } from '../providers/navigation/navigation';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -14,17 +27,28 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    //Modules
+    HttpClientModule,
+    //PagesModule
+    WingsPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    //Pages
+    WingsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    //Modules
+    //Plugins
+    NativePageTransitions,
+    //Providers
+    NavigationProvider
   ]
 })
 export class AppModule {}
