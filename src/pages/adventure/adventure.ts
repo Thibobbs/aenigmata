@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { RulesPage } from '../rules/rules';
+
 @Component({
   selector: 'page-adventure',
   templateUrl: 'adventure.html'
@@ -11,4 +13,8 @@ export class AdventurePage {
 
   }
 
+
+  private showAdventure() {
+    this.navCtrl.push(RulesPage);
+  }
 }
