@@ -14,10 +14,10 @@
 
 
 <ion-content padding>
-  {{ infos.ailes[params.aile].salles[params.salle].name }}
+  {{ infos[params.aile].salles[params.salle].name }}
   <ion-list>
-<!--    <button ion-button full *ngFor="let oeuvre of infos.ailes[params.aile].salles[params.salle].oeuvres; let i = index;" (click)="this.navigate.openPage(nextPage, { 'aile': params.aile, 'salle': params.salle, 'oeuvre': i })">-->
-    <button ion-button full *ngFor="let oeuvre of infos.ailes[params.aile].salles[params.salle].oeuvres; let i = index;" (click)="showAlert({ 'index': i })">
+<!--    <button ion-button full *ngFor="let oeuvre of infos[params.aile].salles[params.salle].oeuvres; let i = index;" (click)="this.navigate.openPage(nextPage, { 'aile': params.aile, 'salle': params.salle, 'oeuvre': i })">-->
+    <button ion-button full *ngFor="let oeuvre of infos[params.aile].salles[params.salle].oeuvres; let i = index;" (click)="showAlert({ 'index': i })">
       {{ oeuvre.name }}
     </button>
   </ion-list>

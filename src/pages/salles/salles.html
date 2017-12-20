@@ -14,9 +14,9 @@
 
 
 <ion-content padding>
-  {{ infos.ailes[params.aile].name }}
+  {{ infos[params.aile].name }}
   <ion-list>
-    <button ion-button full *ngFor="let salle of infos.ailes[params.aile].salles; let i = index;" (click)="this.navigate.openPage(nextPage, { 'aile': params.aile, 'salle': i })">
+    <button ion-button full *ngFor="let salle of infos[params.aile].salles; let i = index;" (click)="this.navigate.openPage(nextPage, { 'aile': params.aile, 'salle': i })">
       {{ salle.name }}
     </button>
   </ion-list>

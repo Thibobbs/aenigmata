@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-button full *ngFor="let aile of infos.ailes; let i = index;" (click)="this.navigate.openPage(nextPage, { 'aile': i })">
+    <button ion-button full *ngFor="let aile of infos; let i = index;" (click)="this.navigate.openPage(nextPage, { 'aile': i })">
       {{ aile.name }}
     </button>
   </ion-list>

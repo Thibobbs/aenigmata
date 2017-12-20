@@ -14,5 +14,6 @@
 
 
 <ion-content padding>
-{{ params }}
+  {{ infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].name }}
+  <button ion-button icon-end full (click)="this.navigate.openPage('ScanPage', { 'aile': params.aile, 'salle': params.salle, 'oeuvre': params.oeuvre, 'callbackParameters': callbackParameters }, true)">SCANNER<ion-icon name="camera"></ion-icon></button>
 </ion-content>
