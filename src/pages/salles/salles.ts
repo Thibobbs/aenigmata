@@ -1,14 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-//Pages
-import { MappingPage } from '../mapping/mapping';
-
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
 
 /**
- * Generated class for the WingsPage page.
+ * Generated class for the SallesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -16,24 +13,22 @@ import { NavigationProvider } from '../../providers/navigation/navigation';
 
 @IonicPage()
 @Component({
-  selector: 'page-wings',
-  templateUrl: 'wings.html',
+  selector: 'page-salles',
+  templateUrl: 'salles.html',
 })
-export class WingsPage {
+export class SallesPage {
 
-  nextPage = MappingPage;
+  nextPage;
   private infos;
+  private params;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private navigate: NavigationProvider) {
     this.infos = navParams.get('infos');
+    this.params = navParams.get('params');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad WingsPage');
-  }
-
-  ionViewWillUnload() {
-//    this.navigate.closePage();
+    console.log('ionViewDidLoad SallesPage');
   }
 
 }

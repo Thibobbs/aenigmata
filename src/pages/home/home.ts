@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 //Pages
-import { WingsPage } from '../wings/wings';
+import { AilesPage } from '../ailes/ailes';
 
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
@@ -13,7 +13,7 @@ import { NavigationProvider } from '../../providers/navigation/navigation';
 })
 export class HomePage {
 
-  nextPage = WingsPage;
+  nextPage = AilesPage;
 
   constructor(public navCtrl: NavController, private navigate: NavigationProvider) {
 

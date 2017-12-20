@@ -7,17 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Ailes</ion-title>
+    <ion-title>CHOISIS L'AILE DE TON CHOIX</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-SELECTIONNER VOTRE JEU
   <ion-list>
-    <button ion-button full *ngFor="let salle of infos.salles; let i = index;" (click)="this.navigate.openPage(nextPage, i)">
-      {{ salle.name }}
+    <button ion-button full *ngFor="let aile of infos.ailes; let i = index;" (click)="this.navigate.openPage(nextPage, { 'aile': i })">
+      {{ aile.name }}
     </button>
   </ion-list>
 </ion-content>
