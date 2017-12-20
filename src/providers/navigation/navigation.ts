@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { NavController, App, Platform } from "ionic-angular";
-import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 //Variables
 import { environment } from '../../environment';
+
+//Plugin
+import { NativePageTransitions, NativeTransitionOptions } from '@ionic-native/native-page-transitions';
 
 /*
   Generated class for the NavigationProvider provider.
@@ -36,9 +38,9 @@ export class NavigationProvider {
       };
 
       this.nativePageTransitions.slide(options);
-      this.navCtrl.push(page, { 'infos': environment, 'params': params }, { 'animate': false });
+      this.navCtrl.push(page, { 'infos': environment.ailes, 'params': params }, { 'animate': false });
     } else {
-      this.navCtrl.push(page, { 'infos': environment, 'params': params });
+      this.navCtrl.push(page, { 'infos': environment.ailes, 'params': params });
     }
     console.log(environment, params, fade);
   }
