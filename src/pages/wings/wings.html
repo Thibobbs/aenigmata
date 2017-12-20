@@ -16,7 +16,7 @@
 <ion-content padding>
 SELECTIONNER VOTRE JEU
   <ion-list>
-    <button ion-button full *ngFor="let salle of infos.salles" (click)="this.navigate.openPage(nextPage)">
+    <button ion-button full *ngFor="let salle of infos.salles; let i = index;" (click)="this.navigate.openPage(nextPage, i)">
       {{ salle.name }}
     </button>
   </ion-list>

@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 //Pages
 import { WingsPage } from '../pages/wings/wings';
 import { WingsPageModule } from '../pages/wings/wings.module';
+import { MappingPage } from '../pages/mapping/mapping';
+import { MappingPageModule } from '../pages/mapping/mapping.module';
 
 //Plugins
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
@@ -31,14 +33,16 @@ import { NavigationProvider } from '../providers/navigation/navigation';
     //Modules
     HttpClientModule,
     //PagesModule
-    WingsPageModule
+    WingsPageModule,
+    MappingPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     //Pages
-    WingsPage
+    WingsPage,
+    MappingPage
   ],
   providers: [
     StatusBar,
