@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 //Pages
 //import { RecherchePage } from '../recherche/recherche';
+import { ScanPage } from '../scan/scan';
 
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
@@ -21,11 +22,24 @@ import { NavigationProvider } from '../../providers/navigation/navigation';
 })
 export class RecherchePage {
 
-  nextPage = RecherchePage;
+  nextPage;
   private infos;
   private params;
+  result;
+
+  callbackParameters = data => {
+    return new Promise((resolve, reject) => {
+      this.infos = data.infos;
+      this.params = data.params;
+      this.result = data.result;
+      console.log(data);
+      resolve();
+    });
+  }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private navigate: NavigationProvider) {
+    this.infos = navParams.get('infos');
+    this.params = navParams.get('params');
   }
 
   ionViewDidLoad() {

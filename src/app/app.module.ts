@@ -19,12 +19,16 @@ import { OeuvresPage } from '../pages/oeuvres/oeuvres';
 import { OeuvresPageModule } from '../pages/oeuvres/oeuvres.module';
 import { RecherchePage } from '../pages/recherche/recherche';
 import { RecherchePageModule } from '../pages/recherche/recherche.module';
+import { ScanPage } from '../pages/scan/scan';
+import { ScanPageModule } from '../pages/scan/scan.module';
 
 //Plugins
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
+import { Camera } from '@ionic-native/camera';
 
 //Providers
 import { NavigationProvider } from '../providers/navigation/navigation';
+import { RecognizeProvider } from '../providers/recognize/recognize';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,8 @@ import { NavigationProvider } from '../providers/navigation/navigation';
     AilesPageModule,
     SallesPageModule,
     OeuvresPageModule,
-    RecherchePageModule
+    RecherchePageModule,
+    ScanPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -50,7 +55,8 @@ import { NavigationProvider } from '../providers/navigation/navigation';
     AilesPage,
     SallesPage,
     OeuvresPage,
-    RecherchePage
+    RecherchePage,
+    ScanPage
   ],
   providers: [
     StatusBar,
@@ -59,8 +65,10 @@ import { NavigationProvider } from '../providers/navigation/navigation';
     //Modules
     //Plugins
     NativePageTransitions,
+    Camera,
     //Providers
-    NavigationProvider
+    NavigationProvider,
+    RecognizeProvider
   ]
 })
 export class AppModule {}
