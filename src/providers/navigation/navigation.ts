@@ -29,14 +29,18 @@ export class NavigationProvider {
     });
   }
 
-  openPage(page: any, params?) {
-    let options: NativeTransitionOptions = {
-      'duration': 300
-    };
+  openPage(page: any, params?, fade?) {
+    if (!fade) {
+      let options: NativeTransitionOptions = {
+        'duration': 300
+      };
 
-    this.nativePageTransitions.slide(options);
-    this.navCtrl.push(page, { 'infos': environment, 'params': params }, { 'animate': false });
-    console.log(environment, params);
+      this.nativePageTransitions.slide(options);
+      this.navCtrl.push(page, { 'infos': environment, 'params': params }, { 'animate': false });
+    } else {
+      this.navCtrl.push(page, { 'infos': environment, 'params': params });
+    }
+    console.log(environment, params, fade);
   }
 
   closePage() {

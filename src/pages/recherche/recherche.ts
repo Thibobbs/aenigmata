@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 //Pages
-import { OeuvresPage } from '../oeuvres/oeuvres';
+//import { RecherchePage } from '../recherche/recherche';
 
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
 
 /**
- * Generated class for the SallesPage page.
+ * Generated class for the RecherchePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -16,22 +16,20 @@ import { NavigationProvider } from '../../providers/navigation/navigation';
 
 @IonicPage()
 @Component({
-  selector: 'page-salles',
-  templateUrl: 'salles.html',
+  selector: 'page-recherche',
+  templateUrl: 'recherche.html',
 })
-export class SallesPage {
+export class RecherchePage {
 
-  nextPage = OeuvresPage;
+  nextPage = RecherchePage;
   private infos;
   private params;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private navigate: NavigationProvider) {
-    this.infos = navParams.get('infos');
-    this.params = navParams.get('params');
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SallesPage');
+    console.log('ionViewDidLoad RecherchePage');
   }
 
 }

@@ -15,6 +15,10 @@ import { AilesPage } from '../pages/ailes/ailes';
 import { AilesPageModule } from '../pages/ailes/ailes.module';
 import { SallesPage } from '../pages/salles/salles';
 import { SallesPageModule } from '../pages/salles/salles.module';
+import { OeuvresPage } from '../pages/oeuvres/oeuvres';
+import { OeuvresPageModule } from '../pages/oeuvres/oeuvres.module';
+import { RecherchePage } from '../pages/recherche/recherche';
+import { RecherchePageModule } from '../pages/recherche/recherche.module';
 
 //Plugins
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
@@ -34,7 +38,9 @@ import { NavigationProvider } from '../providers/navigation/navigation';
     HttpClientModule,
     //PagesModule
     AilesPageModule,
-    SallesPageModule
+    SallesPageModule,
+    OeuvresPageModule,
+    RecherchePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -42,7 +48,9 @@ import { NavigationProvider } from '../providers/navigation/navigation';
     HomePage,
     //Pages
     AilesPage,
-    SallesPage
+    SallesPage,
+    OeuvresPage,
+    RecherchePage
   ],
   providers: [
     StatusBar,
