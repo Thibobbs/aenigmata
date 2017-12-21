@@ -31,16 +31,23 @@ export class NavigationProvider {
     });
   }
 
-  openPage(page: any, params?, fade?) {
+  openPage(page: any, params?, fade?, root?) {
+    let navType;
+    if(!root) {
+      navType = 'push';
+    }
+    else {
+      navType = 'setRoot';
+    }
     if (!fade) {
       let options: NativeTransitionOptions = {
         'duration': 300
       };
 
       this.nativePageTransitions.slide(options);
-      this.navCtrl.push(page, { 'infos': environment.ailes, 'params': params }, { 'animate': false });
+      this.navCtrl[navType](page, { 'infos': environment.ailes, 'params': params }, { 'animate': false });
     } else {
-      this.navCtrl.push(page, { 'infos': environment.ailes, 'params': params });
+      this.navCtrl[navType](page, { 'infos': environment.ailes, 'params': params });
     }
     console.log(environment, params, fade);
   }
