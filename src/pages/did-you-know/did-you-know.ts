@@ -8,6 +8,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
+//  PAGE
+import { RoomChoicePage } from '../room-choice/room-choice';
+
 @IonicPage()
 @Component({
   selector: 'page-did-you-know',
@@ -20,6 +23,11 @@ export class DidYouKnowPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DidYouKnowPage');
+  }
+
+  private slidePage() {
+  
+    this.navCtrl.push( RoomChoicePage);
   }
 
 }
