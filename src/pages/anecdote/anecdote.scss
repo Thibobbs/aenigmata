@@ -50,7 +50,9 @@ page-anecdote {
     font-size: 1.3rem;
     background: #E36588;
     color: white;
-    padding: 20px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
   }
   .contentBot {
     width: 100%;
