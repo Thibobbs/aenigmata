@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 //Pages
-//import { RecherchePage } from '../recherche/recherche';
+import { ResultatPage } from '../resultat/resultat';
 import { ScanPage } from '../scan/scan';
 
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
+
+//Components
+import { TimerComponent } from '../../components/timer/timer';
 
 /**
  * Generated class for the RecherchePage page.
@@ -22,7 +25,7 @@ import { NavigationProvider } from '../../providers/navigation/navigation';
 })
 export class RecherchePage {
 
-  nextPage;
+  nextPage = ResultatPage;
   private infos;
   private params;
   result;
@@ -37,13 +40,49 @@ export class RecherchePage {
     });
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private navigate: NavigationProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private navigate: NavigationProvider, public timer: TimerComponent) {
     this.infos = navParams.get('infos');
     this.params = navParams.get('params');
+
+    this.Timer();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RecherchePage');
   }
 
+  ionViewWillEnter() {
+    if (this.result !== undefined) {
+      this.onResult(this.result);
+    }
+  }
+
+  onResult(result) {
+    if(result) {
+      this.onSuccess(result);
+    }
+    else {
+      this.onFail(result);
+    }
+  }
+
+  onSuccess(result) {
+    this.timer.pauseTimer();
+    this.navigate.openPage(this.nextPage, { 'aile': this.params.aile, 'salle': this.params.salle, 'oeuvre': this.params.oeuvre }, true);
+  }
+
+  onFail(result) {
+    let alert = this.alertCtrl.create();
+    let options = {
+      text: 'REESSAYE !'
+    }
+    alert.setTitle('DOMMAGE');
+    alert.setSubTitle('Tu n\'as pas trouvé le bon tableau.');
+    alert.addButton(options);
+    alert.present();
+  }
+
+  Timer() {
+    this.timer.ngOnInit();
+  }
 }

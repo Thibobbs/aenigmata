@@ -21,6 +21,10 @@ import { RecherchePage } from '../pages/recherche/recherche';
 import { RecherchePageModule } from '../pages/recherche/recherche.module';
 import { ScanPage } from '../pages/scan/scan';
 import { ScanPageModule } from '../pages/scan/scan.module';
+import { ResultatPage } from '../pages/resultat/resultat';
+import { ResultatPageModule } from '../pages/resultat/resultat.module';
+import { AnecdotePage } from '../pages/anecdote/anecdote';
+import { AnecdotePageModule } from '../pages/anecdote/anecdote.module';
 
 //Plugins
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
@@ -29,6 +33,9 @@ import { Camera } from '@ionic-native/camera';
 //Providers
 import { NavigationProvider } from '../providers/navigation/navigation';
 import { RecognizeProvider } from '../providers/recognize/recognize';
+
+//Components
+import { TimerComponent } from '../components/timer/timer'
 
 @NgModule({
   declarations: [
@@ -45,7 +52,9 @@ import { RecognizeProvider } from '../providers/recognize/recognize';
     SallesPageModule,
     OeuvresPageModule,
     RecherchePageModule,
-    ScanPageModule
+    ScanPageModule,
+    ResultatPageModule,
+    AnecdotePageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -56,7 +65,9 @@ import { RecognizeProvider } from '../providers/recognize/recognize';
     SallesPage,
     OeuvresPage,
     RecherchePage,
-    ScanPage
+    ScanPage,
+    ResultatPage,
+    AnecdotePage
   ],
   providers: [
     StatusBar,
@@ -68,7 +79,9 @@ import { RecognizeProvider } from '../providers/recognize/recognize';
     Camera,
     //Providers
     NavigationProvider,
-    RecognizeProvider
+    RecognizeProvider,
+    //Components
+    TimerComponent
   ]
 })
 export class AppModule {}
