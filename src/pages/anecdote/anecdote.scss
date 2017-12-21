@@ -1,3 +1,90 @@
 page-anecdote {
-
+  .header::after {
+    content: '';
+    display: none;
+  }
+  .header {
+    height: 60px;
+    background: #5264C4;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Montserrat-bold;
+    color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    .toolbar-background-md {
+      background: none;
+    }
+    .title .toolbar-title-md {
+      color: white !important;
+      font-size: 2rem;
+    }
+    .bar-button-default-md {
+      color: white;
+    }
+  }
+  .contentPage {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/imgs/bkg-home.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+  .containerPage {
+    position: relative;
+    height: 450px;
+    width: 85%;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .contentTop {
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    font-family: Montserrat-medium;
+    font-size: 1.3rem;
+    background: #E36588;
+    color: white;
+    padding: 20px;
+  }
+  .contentBot {
+    width: 100%;
+    height: 80%;
+    img {
+      height: auto;
+      width: 110%;
+    }
+  }
+  .contentRules__button {
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    margin: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #E36588;
+    border-radius: 50%;
+    width: 106px;
+    height: 106px;
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25); // transition: box-shadow .5s ease;
+    ion-icon {
+      font-size: 2.3em;
+      color: #E36588;
+      transition: transform .5s ease;
+    }
+    &:active {
+      // box-shadow: 0;
+      background: white;
+    }
+    &:active ion-icon {
+      transform: translateX(5px)
+    }
+  }
 }
