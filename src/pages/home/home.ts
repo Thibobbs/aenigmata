@@ -5,7 +5,7 @@ import { NavController } from 'ionic-angular';
 import { environment } from '../../environment';
 
 //Pages
-import { AilesPage } from '../ailes/ailes';
+import { SallesPage } from '../salles/salles';
 
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
@@ -19,9 +19,10 @@ import { Storage } from '@ionic/storage';
 })
 export class HomePage {
 
-  nextPage = AilesPage;
+  nextPage = SallesPage;
 
   constructor(public navCtrl: NavController, private navigate: NavigationProvider, private storage: Storage) {
+//    this.clearStorage();
     this.checkStorage();
   }
 
@@ -32,6 +33,14 @@ export class HomePage {
         if (!val) {
           this.storage.set('infos', environment.ailes);
         }
+      });
+    });
+  }
+
+  clearStorage() {
+    this.storage.ready().then(() => {
+      this.storage.clear().then(() => {
+        console.log('storage cleared');
       });
     });
   }
