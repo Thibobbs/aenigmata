@@ -29,6 +29,7 @@ import { AnecdotePageModule } from '../pages/anecdote/anecdote.module';
 //Plugins
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { Camera } from '@ionic-native/camera';
+import { IonicStorageModule } from '@ionic/storage';
 
 //Providers
 import { NavigationProvider } from '../providers/navigation/navigation';
@@ -54,7 +55,8 @@ import { TimerComponent } from '../components/timer/timer'
     RecherchePageModule,
     ScanPageModule,
     ResultatPageModule,
-    AnecdotePageModule
+    AnecdotePageModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

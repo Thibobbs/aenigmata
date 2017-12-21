@@ -24,7 +24,7 @@
 -->
   <ion-slides pager>
 
-    <ion-slide *ngFor="let oeuvre of infos[params.aile].salles[params.salle].oeuvres; let i = index;" (click)="showAlert({ 'index': i })">
+    <ion-slide *ngFor="let oeuvre of infos[params.aile].salles[params.salle].oeuvres; let i = index;" (click)="checkOeuvre(i)">
      {{ infos[params.aile].salles[params.salle].name }}
       <button ion-button full>
       {{ oeuvre.name }}

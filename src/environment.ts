@@ -12,7 +12,8 @@ export const environment = {
               "date": 1539,
               "anecdote": "François 1er est de profil sur ce tableau car le peintre s'est servi d'une pièce de monnaie comme modèle.",
               "img": "Francois.jpg",
-              "id": "francois"
+              "id": "francois",
+              "locked": false
             },
             {
               "name": "La Joconde",
@@ -20,7 +21,8 @@ export const environment = {
               "date": "Entre 1503 et 1506",
               "anecdote": "La Joconde a perdu ces sourcils et ces cils avec le vieillissement de la peinture.",
               "img": "Joconde.jpg",
-              "id": "monalisa"
+              "id": "monalisa",
+              "locked": true
             },
             {
               "name": "Les noces de Cana",
@@ -28,7 +30,8 @@ export const environment = {
               "date": "Entre 1562 et 1563",
               "anecdote": "Ce tableau immense a été enlevé aux Vénitiens lors de l’une des bataille de Napoléon en Italie. Le Louvre n’a jamais pu rendre le tableau car il est trop grand pour être transporté.",
               "img": "Cana.jpg",
-              "id": "cana"
+              "id": "cana",
+              "locked": true
             }
           ]
         },
@@ -41,7 +44,8 @@ export const environment = {
               "date": 1827,
               "anecdote": "Ce chef-d’oeuvre fut refusé par les juges. Très déçu, le peintre cacha son tableau pendant 20 ans avant de le vendre à un collectionneur.  ",
               "img": "Mort.jpg",
-              "id": "mort"
+              "id": "mort",
+              "locked": false
             },
             {
               "name": "Le Cuirassier blessé quittant le feu ",
@@ -49,7 +53,8 @@ export const environment = {
               "date": 1814,
               "anecdote": "Le peintre a copié le cheval d’un autre tableau pour cette oeuvre.",
               "img": "Cuirassier.jpg",
-              "id": "corazziere"
+              "id": "corazziere",
+              "locked": true
             },
             {
               "name": "La Liberté guidant le peuple",
@@ -57,7 +62,8 @@ export const environment = {
               "date": 1830,
               "anecdote": "Attention cette oeuvre ne représente pas la Révolution Française de 1789 et Louis XVI n’est pas le dernier roi de France ! Louis XVIII, puis son frère Charles X se succèdent au pouvoir. Ce dernier tente de supprimer la liberté de la presse alors que celle-ci est écrite dans la Constitution : le peuple français se soulève donc lors de cette révolte de 1830.",
               "img": "Liberte.jpg",
-              "id": "liberte"
+              "id": "liberte",
+              "locked": true
             },
             {
               "name": "Jeune tigre jouant avec sa mère",
@@ -65,7 +71,8 @@ export const environment = {
               "date": "Entre 1830 et 1831",
               "anecdote": "Pour pouvoir observer des tigres, le peintre allait régulièrement au zoo du Jardin des Plantes. Il passait des heures à les observer.",
               "img": "Tigre.jpg",
-              "id": "tigre"
+              "id": "tigre",
+              "locked": true
             }
           ]
         },
@@ -78,7 +85,8 @@ export const environment = {
               "date": 1814,
               "anecdote": "Le peintre a fait cette oeuvre sur commande mais n’a jamais été payé  ! Et oui, le client a perdue toute sa fortune entre temps mais le peintre a quand même livré le tableau.",
               "img": "Odalisque.jpg",
-              "id": "odalisque"
+              "id": "odalisque",
+              "locked": false
             },
             {
               "name": "Sacre de l’Empereur Napoléon 1er et couronnement de l’impératrice Joséphine",
@@ -86,7 +94,8 @@ export const environment = {
               "date": "De 1806 à 1807",
               "anecdote": "Attention il ne faut pas oublier que c’est un 2 décembre que cette cérémonie de 5h a eu lieu. Les gens avaient très froid sans manteau ! Surtout les femmes qui avaient de belles robes fines.",
               "img": "Napoleon.jpg",
-              "id": "napoleon"
+              "id": "napoleon",
+              "locked": true
             },
             {
               "name": "Le Serment des Horaces",
@@ -94,7 +103,8 @@ export const environment = {
               "date": "De 1784 à 1785",
               "anecdote": "As-tu remarqué que le chiffre 3 est présent partout ? \n- les 3 soldats\n- les 3 épées\n- les 3 arches\n- les 3 femmes",
               "img": "Serment.jpg",
-              "id": "serment"
+              "id": "serment",
+              "locked": true
             }
           ]
         }

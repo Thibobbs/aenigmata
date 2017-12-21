@@ -51,4 +51,10 @@ export class OeuvresPage {
     alert.present();
   }
 
+  checkOeuvre(index) {
+    if(!this.infos[this.params.aile].salles[this.params.salle].oeuvres[index].locked) {
+       this.showAlert({ 'index': index })
+    }
+  }
+
 }

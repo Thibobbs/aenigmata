@@ -11,6 +11,9 @@ import { NavigationProvider } from '../../providers/navigation/navigation';
 //Components
 import { TimerComponent } from '../../components/timer/timer';
 
+//Plugin
+import { Storage } from '@ionic/storage';
+
 /**
  * Generated class for the RecherchePage page.
  *
@@ -40,7 +43,7 @@ export class RecherchePage {
     });
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private navigate: NavigationProvider, public timer: TimerComponent) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private navigate: NavigationProvider, public timer: TimerComponent, private storage: Storage) {
     this.infos = navParams.get('infos');
     this.params = navParams.get('params');
 
@@ -68,6 +71,7 @@ export class RecherchePage {
 
   onSuccess(result) {
     this.timer.pauseTimer();
+    this.unlockNext(this.params.oeuvre);
     this.navigate.openPage(this.nextPage, { 'aile': this.params.aile, 'salle': this.params.salle, 'oeuvre': this.params.oeuvre }, true);
   }
 
@@ -84,5 +88,12 @@ export class RecherchePage {
 
   Timer() {
     this.timer.ngOnInit();
+  }
+
+  unlockNext(index) {
+    if(this.infos[this.params.aile].salles[this.params.salle].oeuvres[index+1]) {
+      this.infos[this.params.aile].salles[this.params.salle].oeuvres[index+1].locked = false;
+      this.storage.set('infos', this.infos);
+    }
   }
 }
