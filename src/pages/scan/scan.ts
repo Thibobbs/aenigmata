@@ -62,6 +62,11 @@ export class ScanPage {
     }, err => {
       // Handle error
       console.log(err);
+      let data = {
+        infos: this.infos,
+        params: this.params
+      }
+      this.sendParameters(data);
     });
   }
 
@@ -86,12 +91,6 @@ export class ScanPage {
   }
 
   saveResult(result) {
-//    if (result.status !== 0) {
-//      this.result = 'Raté, ce n\'est pas la bonne image :(';
-//    }
-//    else {
-//      this.result = 'BRAVO ! Tu as trouvé le tableau de artiste';
-//    }
     console.log(result);
     if (result.status !== 0) {
       this.result = false;
