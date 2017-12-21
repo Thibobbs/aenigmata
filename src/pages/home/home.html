@@ -1,18 +1,6 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content padding class="home">
+    <ion-img class="home__logo"  width="130" height="130" src="./../assets/imgs/logo.png" alt=""></ion-img>
+    <h1 class="contentHome__title">AENIGMATA</h1>
 
-<ion-content padding>
-  <h1> test</h1>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-  <button ion-button (tap)='showAdventure()' > Default ss</button>
-
-  <ion-img width="80" height="80" src="../../assets/imgs/logo.png"></ion-img>
+    <button ion-button outline (tap)="slidePage()" class="contentHome__button">Jouer</button>
 </ion-content>

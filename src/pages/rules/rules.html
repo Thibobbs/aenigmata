@@ -1,22 +1,22 @@
-<!-- <ion-header class="adventure-header">
-    <ion-navbar class="adventure-navbar">
-       
-    </ion-navbar>
-</ion-header> -->
+<ion-header class="rules-header">
 
-<ion-content padding class="contentAdventure">
-    <h1 class="contentAdventure__title">COMMENT ÇA MARCHE ?</h1>
+    <ion-title class="rules-title">REGLES DU JEU</ion-title>
+</ion-header>
 
-    <p class="contentAdventure__description">
-            Lorem ipsum dolor sit amet, consectetur 
-            adipiscing elit. Nulla molestie dictum velit, 
-            at sodales mauris. Suspendisse sed 
-            fermentum urna. Sed a dui ipsum. 
-            Ut id imperdiet ex.
-    </p>
+<ion-content padding class="contentRules">
 
-    <button ion-button outline class="contentAdventure__button">
-       J'ai compri
-        <ion-img class="contentAdventure__buttonImg"  src="../../assets/imgs/arrow-pointing-to-right.png"></ion-img>
-    </button>
+    <div class="containerRules">
+        <h1 class="contentRules__title">COMMENT ÇA MARCHE ?</h1>
+
+        <p class="contentRules__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie dictum velit, at sodales mauris. Suspendisse sed
+            fermentum urna. Sed a dui ipsum. Ut id imperdiet ex.
+        </p>
+
+        <button ion-button outline (tap)='slidePage()' class="contentRules__button">
+            <!-- <ion-img class="contentRules__buttonImg" src="../../assets/imgs/arrow-pointing-to-right.png"></ion-img> -->
+            <ion-icon class="buttonIcon" name="arrow-round-forward"></ion-icon>
+        </button>
+    </div>
+
 </ion-content>
