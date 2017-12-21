@@ -15,11 +15,14 @@
 <ion-content padding class="contentPage">
 
 
-  <div class="card" *ngFor="let salle of infos[params.aile].salles; let i = index;" (click)="this.navigate.openPage(nextPage, { 'aile': params.aile, 'salle': i })">
-    <div class="cardTop">
-      <span>Peinture Française</span>
+  <div *ngFor="let aile of infos; let i = index;">
+    <h2 class="wing">{{ aile.name }}</h2>
+    <div class="card" *ngFor="let salle of infos[i].salles; let j = index;" (click)="this.navigate.openPage(nextPage, { 'aile': i, 'salle': j })">
+      <div class="cardTop">
+        <span>{{ salle.style }}</span>
+      </div>
+      <div class="cardBot">{{ salle.name }}</div>
     </div>
-    <div class="cardBot">{{ salle.name }}</div>
   </div>
 
 </ion-content>

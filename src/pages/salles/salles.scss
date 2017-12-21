@@ -19,7 +19,7 @@ page-salles {
     }
     .title .toolbar-title-md {
       color: white !important;
-      width: 85%;
+//      width: 85%;
       font-size: 2rem;
     }
     .bar-button-default-md {
@@ -35,11 +35,9 @@ page-salles {
     background-size: cover;
     text-align: center;
 
-    .scroll-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
+    .wing {
+      padding: 10px 0;
+      color: #fff;
     }
     /* Rectangle */
     .card {
@@ -51,6 +49,7 @@ page-salles {
       overflow: hidden;
       /* Rectangle */
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin: 20px auto;
     }
     .cardTop {
       width: 100%;

@@ -11,8 +11,6 @@ import { HomePage } from '../pages/home/home';
 import { HttpClientModule } from '@angular/common/http';
 
 //Pages
-import { AilesPage } from '../pages/ailes/ailes';
-import { AilesPageModule } from '../pages/ailes/ailes.module';
 import { SallesPage } from '../pages/salles/salles';
 import { SallesPageModule } from '../pages/salles/salles.module';
 import { OeuvresPage } from '../pages/oeuvres/oeuvres';
@@ -49,7 +47,6 @@ import { TimerComponent } from '../components/timer/timer'
     //Modules
     HttpClientModule,
     //PagesModule
-    AilesPageModule,
     SallesPageModule,
     OeuvresPageModule,
     RecherchePageModule,
@@ -63,7 +60,6 @@ import { TimerComponent } from '../components/timer/timer'
     MyApp,
     HomePage,
     //Pages
-    AilesPage,
     SallesPage,
     OeuvresPage,
     RecherchePage,
