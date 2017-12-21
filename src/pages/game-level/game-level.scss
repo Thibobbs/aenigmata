@@ -38,5 +38,17 @@ page-game-level {
         background-repeat: no-repeat;
         background-size: cover;
         text-align: center;
+        overflow-x: scroll;
+
+
+        .scroll-content {
+            margin-top: 140px !important;
+            overflow: scroll;
+        }
+        .levelSvg {
+            height: 100% !important;
+        }
     }
+
+
 }
