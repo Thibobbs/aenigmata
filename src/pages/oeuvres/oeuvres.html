@@ -13,12 +13,23 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+<!--
   {{ infos[params.aile].salles[params.salle].name }}
   <ion-list>
-<!--    <button ion-button full *ngFor="let oeuvre of infos[params.aile].salles[params.salle].oeuvres; let i = index;" (click)="this.navigate.openPage(nextPage, { 'aile': params.aile, 'salle': params.salle, 'oeuvre': i })">-->
     <button ion-button full *ngFor="let oeuvre of infos[params.aile].salles[params.salle].oeuvres; let i = index;" (click)="showAlert({ 'index': i })">
       {{ oeuvre.name }}
     </button>
   </ion-list>
+-->
+  <ion-slides pager>
+
+    <ion-slide *ngFor="let oeuvre of infos[params.aile].salles[params.salle].oeuvres; let i = index;" (click)="showAlert({ 'index': i })">
+     {{ infos[params.aile].salles[params.salle].name }}
+      <button ion-button full>
+      {{ oeuvre.name }}
+      </button>
+    </ion-slide>
+
+  </ion-slides>
 </ion-content>

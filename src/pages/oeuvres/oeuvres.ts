@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
 //Pages
 import { RecherchePage } from '../recherche/recherche';
@@ -36,17 +35,6 @@ export class OeuvresPage {
   }
 
   showAlert(data) {
-//    let alert = this.alertCtrl.create({
-//      title: 'New Friend!',
-//      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
-//      buttons: [
-//        {
-//          text: 'OK',
-//          handler: () => {}
-//        }
-//      ]
-//    });
-//    alert.present();
     let params = this.params;
     params.oeuvre = data.index;
 
