@@ -5,15 +5,17 @@ export const environment = {
       "salles": [
         {
           "name": "Salle 6",
+          "style": "Peinture italienne",
           "oeuvres": [
             {
               "name": "Portrait de François 1er",
-              "artist": "Tiziano VECELLIO",
+              "artist": "Tiziano Vecellio",
               "date": 1539,
               "anecdote": "François 1er est de profil sur ce tableau car le peintre s'est servi d'une pièce de monnaie comme modèle.",
               "img": "Francois.jpg",
               "id": "francois",
-              "locked": false
+              "locked": false,
+              "done": false
             },
             {
               "name": "La Joconde",
@@ -22,7 +24,8 @@ export const environment = {
               "anecdote": "La Joconde a perdu ces sourcils et ces cils avec le vieillissement de la peinture.",
               "img": "Joconde.jpg",
               "id": "monalisa",
-              "locked": true
+              "locked": true,
+              "done": false
             },
             {
               "name": "Les noces de Cana",
@@ -31,12 +34,14 @@ export const environment = {
               "anecdote": "Ce tableau immense a été enlevé aux Vénitiens lors de l’une des bataille de Napoléon en Italie. Le Louvre n’a jamais pu rendre le tableau car il est trop grand pour être transporté.",
               "img": "Cana.jpg",
               "id": "cana",
-              "locked": true
+              "locked": true,
+              "done": false
             }
           ]
         },
         {
           "name": "Salle 77",
+          "style": "Peinture française",
           "oeuvres": [
             {
               "name": "La Mort de Sardanapale",
@@ -45,7 +50,8 @@ export const environment = {
               "anecdote": "Ce chef-d’oeuvre fut refusé par les juges. Très déçu, le peintre cacha son tableau pendant 20 ans avant de le vendre à un collectionneur.  ",
               "img": "Mort.jpg",
               "id": "mort",
-              "locked": false
+              "locked": false,
+              "done": false
             },
             {
               "name": "Le Cuirassier blessé quittant le feu ",
@@ -54,7 +60,8 @@ export const environment = {
               "anecdote": "Le peintre a copié le cheval d’un autre tableau pour cette oeuvre.",
               "img": "Cuirassier.jpg",
               "id": "corazziere",
-              "locked": true
+              "locked": true,
+              "done": false
             },
             {
               "name": "La Liberté guidant le peuple",
@@ -63,7 +70,8 @@ export const environment = {
               "anecdote": "Attention cette oeuvre ne représente pas la Révolution Française de 1789 et Louis XVI n’est pas le dernier roi de France ! Louis XVIII, puis son frère Charles X se succèdent au pouvoir. Ce dernier tente de supprimer la liberté de la presse alors que celle-ci est écrite dans la Constitution : le peuple français se soulève donc lors de cette révolte de 1830.",
               "img": "Liberte.jpg",
               "id": "liberte",
-              "locked": true
+              "locked": true,
+              "done": false
             },
             {
               "name": "Jeune tigre jouant avec sa mère",
@@ -72,12 +80,14 @@ export const environment = {
               "anecdote": "Pour pouvoir observer des tigres, le peintre allait régulièrement au zoo du Jardin des Plantes. Il passait des heures à les observer.",
               "img": "Tigre.jpg",
               "id": "tigre",
-              "locked": true
+              "locked": true,
+              "done": false
             }
           ]
         },
         {
           "name": "Salle 75",
+          "style": "Peinture française",
           "oeuvres": [
             {
               "name": "Une Odalisque",
@@ -86,7 +96,8 @@ export const environment = {
               "anecdote": "Le peintre a fait cette oeuvre sur commande mais n’a jamais été payé  ! Et oui, le client a perdue toute sa fortune entre temps mais le peintre a quand même livré le tableau.",
               "img": "Odalisque.jpg",
               "id": "odalisque",
-              "locked": false
+              "locked": false,
+              "done": false
             },
             {
               "name": "Sacre de l’Empereur Napoléon 1er et couronnement de l’impératrice Joséphine",
@@ -95,7 +106,8 @@ export const environment = {
               "anecdote": "Attention il ne faut pas oublier que c’est un 2 décembre que cette cérémonie de 5h a eu lieu. Les gens avaient très froid sans manteau ! Surtout les femmes qui avaient de belles robes fines.",
               "img": "Napoleon.jpg",
               "id": "napoleon",
-              "locked": true
+              "locked": true,
+              "done": false
             },
             {
               "name": "Le Serment des Horaces",
@@ -104,14 +116,12 @@ export const environment = {
               "anecdote": "As-tu remarqué que le chiffre 3 est présent partout ? \n- les 3 soldats\n- les 3 épées\n- les 3 arches\n- les 3 femmes",
               "img": "Serment.jpg",
               "id": "serment",
-              "locked": true
+              "locked": true,
+              "done": false
             }
           ]
         }
       ]
-    },
-    {
-      "name": "Aile Mollien"
     }
   ],
   recognizeConfig: {
