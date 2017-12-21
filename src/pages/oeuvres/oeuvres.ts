@@ -39,15 +39,15 @@ export class OeuvresPage {
     params.oeuvre = data.index;
 
     let alert = this.alertCtrl.create();
-    let options = {
+    let buttonOptions = {
       text: 'COMMENCER',
       handler: () => {
         this.navigate.openPage(this.nextPage, params);
       }
     }
-    alert.setTitle('OEUVRES ' + (params.oeuvre + 1));
-    alert.setSubTitle('Temps imparti: 3min');
-    alert.addButton(options);
+    alert.setTitle('TABLEAU ' + (params.oeuvre + 1));
+    alert.setSubTitle('4 minutes');
+    alert.addButton(buttonOptions);
     alert.present();
   }
 

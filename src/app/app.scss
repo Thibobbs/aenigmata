@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,48 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+ion-alert {
+  .alert-wrapper {
+    position: relative;
+    width: 277px;
+    height: 150.13px;
+    border-radius: 10px !important;
+    background: white;
+    overflow: hidden;
+    /* Rectangle */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 20px auto;
+    .alert-head {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      width: 100%;
+      height: 75%;
+      background: #E36588;
+      font-family: Montserrat-medium;
+      font-size: 2.1rem;
+      color: white;
+      padding: 0;
+      h2, h3 {
+        letter-spacing: 2px !important;
+        vertical-align: middle;
+        text-transform: uppercase;
+      }
+      h2 {
+        letter-spacing: 5px !important;
+      }
+    }
+    .alert-button-group {
+      padding: 0;
+      justify-content: center;
+      text-align: center;
+      height: 25%;
+      color: #828282 !important;
+      font-family: Montserrat-medium;
+      .button-inner {
+        color: #828282 !important;
+      }
+    }
+  }
+}
