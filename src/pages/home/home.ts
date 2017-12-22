@@ -26,6 +26,17 @@ export class HomePage {
     this.checkStorage();
   }
 
+  ionViewDidLoad() {
+    document.addEventListener('DOMContentLoaded', () => {
+      let button = document.querySelector('svg');
+
+      button.addEventListener('click', () => {
+        this.navigate.openPage(this.nextPage, {}, true, 'root');
+      });
+    }, false);
+
+  }
+
   checkStorage() {
     this.storage.ready().then(() => {
       this.storage.get('infos').then(val => {
