@@ -25,11 +25,11 @@ export class NavigationProvider {
 
     this.navCtrl = app.getActiveNavs()[0];
 
-    this.platform.registerBackButtonAction( () => {
-      if (this.navCtrl.getPrevious()) {
-        this.closePage();
-      }
-    });
+//    this.platform.registerBackButtonAction( () => {
+//      if (this.navCtrl.canGoBack()) {
+//        this.closePage();
+//      }
+//    });
   }
 
   openPage(page: any, params?, fade?, root?) {
