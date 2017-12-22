@@ -4,9 +4,6 @@ import { NavController } from 'ionic-angular';
 //Variables
 import { environment } from '../../environment';
 
-//Pages
-import { ReglePage } from '../regle/regle';
-
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
 
@@ -19,7 +16,7 @@ import { Storage } from '@ionic/storage';
 })
 export class HomePage {
 
-  nextPage = ReglePage;
+  nextPage = 'ReglePage';
 
   constructor(public navCtrl: NavController, private navigate: NavigationProvider, private storage: Storage) {
 //    this.clearStorage();

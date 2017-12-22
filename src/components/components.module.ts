@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { TimerComponent } from './timer/timer';
+//import { TimerComponent } from './timer/timer';
+import { IonicModule } from 'ionic-angular';
 @NgModule({
-	declarations: [TimerComponent],
-	imports: [],
-	exports: [TimerComponent]
+	declarations: [],
+	imports: [IonicModule],
+	exports: []
 })
 export class ComponentsModule {}

@@ -10,22 +10,6 @@ import { HomePage } from '../pages/home/home';
 //Modules
 import { HttpClientModule } from '@angular/common/http';
 
-//Pages
-import { SallesPage } from '../pages/salles/salles';
-import { SallesPageModule } from '../pages/salles/salles.module';
-import { OeuvresPage } from '../pages/oeuvres/oeuvres';
-import { OeuvresPageModule } from '../pages/oeuvres/oeuvres.module';
-import { RecherchePage } from '../pages/recherche/recherche';
-import { RecherchePageModule } from '../pages/recherche/recherche.module';
-import { ScanPage } from '../pages/scan/scan';
-import { ScanPageModule } from '../pages/scan/scan.module';
-import { ResultatPage } from '../pages/resultat/resultat';
-import { ResultatPageModule } from '../pages/resultat/resultat.module';
-import { AnecdotePage } from '../pages/anecdote/anecdote';
-import { AnecdotePageModule } from '../pages/anecdote/anecdote.module';
-import { ReglePage } from '../pages/regle/regle';
-import { ReglePageModule } from '../pages/regle/regle.module';
-
 //Plugins
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
 import { Camera } from '@ionic-native/camera';
@@ -48,28 +32,12 @@ import { TimerComponent } from '../components/timer/timer'
     IonicModule.forRoot(MyApp),
     //Modules
     HttpClientModule,
-    //PagesModule
-    SallesPageModule,
-    OeuvresPageModule,
-    RecherchePageModule,
-    ScanPageModule,
-    ResultatPageModule,
-    AnecdotePageModule,
-    ReglePageModule,
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    //Pages
-    SallesPage,
-    OeuvresPage,
-    RecherchePage,
-    ScanPage,
-    ResultatPage,
-    AnecdotePage,
-    ReglePage
+    HomePage
   ],
   providers: [
     StatusBar,
