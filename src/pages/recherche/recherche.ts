@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
-//Pages
-import { ResultatPage } from '../resultat/resultat';
-import { ScanPage } from '../scan/scan';
-
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
 
@@ -28,11 +24,11 @@ import { Storage } from '@ionic/storage';
 })
 export class RecherchePage {
 
-  nextPage = ResultatPage;
+  nextPage = 'ResultatPage';
   private infos;
   private params;
   result;
-  private extractPath = '../../assets/imgs/extract/';
+  private extractPath = 'assets/imgs/extract/';
 
   callbackParameters = data => {
     return new Promise((resolve, reject) => {

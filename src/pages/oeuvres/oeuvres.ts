@@ -1,10 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, Slides } from 'ionic-angular';
 
-//Pages
-import { RecherchePage } from '../recherche/recherche';
-import { AnecdotePage } from '../anecdote/anecdote';
-
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
 
@@ -27,7 +23,7 @@ export class OeuvresPage {
 
   @ViewChild(Slides) slides: Slides;
 
-  nextPage = RecherchePage;
+  nextPage = 'RecherchePage';
   private infos;
   private params;
   private unlock;
@@ -114,7 +110,7 @@ export class OeuvresPage {
       }
       else {
         this.params.oeuvre = index;
-        this.navigate.openPage(AnecdotePage, this.params, true);
+        this.navigate.openPage('AnecdotePage', this.params, true);
       }
     }
   }

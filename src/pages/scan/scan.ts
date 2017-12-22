@@ -96,7 +96,7 @@ export class ScanPage {
       this.result = false;
     }
     else {
-      if (result.id !== this.infos[this.params.aile].salles[this.params.salle].oeuvres[this.params.oeuvre].id) {
+      if (result.objects[0].id !== this.infos[this.params.aile].salles[this.params.salle].oeuvres[this.params.oeuvre].id) {
         this.result = false;
       }
       else {

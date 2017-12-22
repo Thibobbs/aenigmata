@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-//Pages
-import { OeuvresPage } from '../oeuvres/oeuvres';
-
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
 
@@ -21,7 +18,7 @@ import { NavigationProvider } from '../../providers/navigation/navigation';
 })
 export class SallesPage {
 
-  nextPage = OeuvresPage;
+  nextPage = 'OeuvresPage';
   private infos;
   private params;
 

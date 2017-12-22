@@ -4,9 +4,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 //Variables
 //import { environment } from '../../environment';
 
-//Pages
-import { SallesPage } from '../salles/salles';
-
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
 
@@ -24,7 +21,7 @@ import { NavigationProvider } from '../../providers/navigation/navigation';
 })
 export class ReglePage {
 
-  nextPage = SallesPage;
+  nextPage = 'SallesPage';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private navigate: NavigationProvider) {
   }

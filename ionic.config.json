@@ -4,9 +4,5 @@
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
-  },
-  "proxies": [{
-    "path": "/",
-    "proxyUrl": "http://clapi.itraff.pl/"
-  }]
+  }
 }
