@@ -23,6 +23,8 @@ import { ResultatPage } from '../pages/resultat/resultat';
 import { ResultatPageModule } from '../pages/resultat/resultat.module';
 import { AnecdotePage } from '../pages/anecdote/anecdote';
 import { AnecdotePageModule } from '../pages/anecdote/anecdote.module';
+import { ReglePage } from '../pages/regle/regle';
+import { ReglePageModule } from '../pages/regle/regle.module';
 
 //Plugins
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
@@ -53,6 +55,7 @@ import { TimerComponent } from '../components/timer/timer'
     ScanPageModule,
     ResultatPageModule,
     AnecdotePageModule,
+    ReglePageModule,
     IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
@@ -65,7 +68,8 @@ import { TimerComponent } from '../components/timer/timer'
     RecherchePage,
     ScanPage,
     ResultatPage,
-    AnecdotePage
+    AnecdotePage,
+    ReglePage
   ],
   providers: [
     StatusBar,
