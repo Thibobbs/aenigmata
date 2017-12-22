@@ -15,15 +15,18 @@
 
   <div class="containerPage">
     <div class="contentTop">
-      Tu as trouvé le {{ infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].name }} de {{ infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].artist }}
+      <span>Tu as trouvé le tableau !<br>
+        C'est <span class="italic">{{ infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].name }}</span><br>
+        de {{ infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].artist }}
+      </span>
     </div>
-    <div class="contentBot">
-      <img src="../../assets/imgs/theodor-result.png" alt="">
+    <div class="contentBot" [style.backgroundImage]="'url(' + imgPath + infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].img + ')'">
+      <!--      <img [src]="imgPath + infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].img" alt="">-->
 
     </div>
 
   </div>
-  <button ion-button outline (click)="this.navigate.openPage(nextPage, { 'aile': params.aile, 'salle': params.salle, 'oeuvre': params.oeuvre })" class="contentRules__button">
+  <button ion-button outline (click)="this.navigate.openPage(nextPage, params, true)" class="contentRules__button">
     <!-- <ion-img class="contentRules__buttonImg" src="../../assets/imgs/arrow-pointing-to-right.png"></ion-img> -->
     <ion-icon class="buttonIcon" name="arrow-round-forward"></ion-icon>
     <!-- <img src="../../assets/imgs/photo-camera.png" alt="">-->

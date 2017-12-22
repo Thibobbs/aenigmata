@@ -50,7 +50,13 @@ page-resultat {
     font-size: 2rem;
     background: #E36588;
     color: white;
-    padding: 30px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+
+    .italic {
+      font-style: italic;
+    }
   }
   .contentBot {
     width: 100%;
@@ -59,6 +65,8 @@ page-resultat {
       height: auto;
       width: 110%;
     }
+    background-size: cover;
+    background-position: center;
   }
   .contentRules__button {
     position: absolute;

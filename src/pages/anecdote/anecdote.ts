@@ -24,6 +24,7 @@ export class AnecdotePage {
   nextPage;
   private infos;
   private params;
+  private imgPath = '../../assets/imgs/full/';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private navigate: NavigationProvider) {
     this.infos = navParams.get('infos');
@@ -32,6 +33,10 @@ export class AnecdotePage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AnecdotePage');
+  }
+
+  returnToOeuvres() {
+    this.navCtrl.remove(2, 3);
   }
 
 }

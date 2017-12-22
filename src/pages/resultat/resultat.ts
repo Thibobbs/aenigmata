@@ -24,6 +24,7 @@ export class ResultatPage {
   nextPage = AnecdotePage;
   private infos;
   private params;
+  private imgPath = '../../assets/imgs/full/';
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private navigate: NavigationProvider) {
     this.infos = navParams.get('infos');

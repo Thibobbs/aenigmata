@@ -15,12 +15,10 @@
 
     <div class="containerPage">
       <div class="contentTop">
-          TROUVE LE TABLEAU
-          CI-DESSOUS ET PREND
-          LE EN PHOTO
+          {{ infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].indice }}
       </div>
       <div class="contentBot">
-        <img src="../../assets/imgs/theodor.png" alt="">
+        <img [src]="extractPath + infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].extract" alt="">
 
       </div>
 

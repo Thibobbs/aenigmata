@@ -17,13 +17,13 @@
       <div class="contentTop">
         {{ infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].anecdote }}
       </div>
-      <div class="contentBot">
-        <img src="../../assets/imgs/theodor-result.png" alt="">
+      <div class="contentBot" [style.backgroundImage]="'url(' + imgPath + infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].img + ')'">
+<!--        <img [src]="imgPath + infos[params.aile].salles[params.salle].oeuvres[params.oeuvre].img" alt="">-->
 
       </div>
 
     </div>
-    <button ion-button outline (click)="this.navCtrl.popToRoot()" class="contentRules__button">
+    <button ion-button outline (click)="this.returnToOeuvres()" class="contentRules__button">
       <!-- <ion-img class="contentRules__buttonImg" src="../../assets/imgs/arrow-pointing-to-right.png"></ion-img> -->
       <ion-icon class="buttonIcon" name="arrow-round-forward"></ion-icon>
       <!-- <img src="../../assets/imgs/photo-camera.png" alt="">-->

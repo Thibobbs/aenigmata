@@ -32,6 +32,7 @@ export class RecherchePage {
   private infos;
   private params;
   result;
+  private extractPath = '../../assets/imgs/extract/';
 
   callbackParameters = data => {
     return new Promise((resolve, reject) => {
@@ -72,7 +73,7 @@ export class RecherchePage {
   onSuccess(result) {
     this.timer.pauseTimer();
     this.unlockNext(this.params.oeuvre);
-    this.navigate.openPage(this.nextPage, { 'aile': this.params.aile, 'salle': this.params.salle, 'oeuvre': this.params.oeuvre }, true);
+    this.navigate.openPage(this.nextPage, { 'aile': this.params.aile, 'salle': this.params.salle, 'oeuvre': this.params.oeuvre, 'unlock': this.params.oeuvre }, true);
   }
 
   onFail(result) {
@@ -94,6 +95,7 @@ export class RecherchePage {
     if(this.infos[this.params.aile].salles[this.params.salle].oeuvres[index+1]) {
       this.infos[this.params.aile].salles[this.params.salle].oeuvres[index+1].locked = false;
       this.storage.set('infos', this.infos);
+      this.storage.set('unlock', index);
     }
   }
 }
