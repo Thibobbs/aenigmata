@@ -73,6 +73,7 @@ export class RecherchePage {
   onSuccess(result) {
     this.timer.pauseTimer();
     this.unlockNext(this.params.oeuvre);
+    this.setDone(this.params.oeuvre);
     this.navigate.openPage(this.nextPage, { 'aile': this.params.aile, 'salle': this.params.salle, 'oeuvre': this.params.oeuvre, 'unlock': this.params.oeuvre }, true);
   }
 
@@ -100,5 +101,10 @@ export class RecherchePage {
     else {
       this.storage.set('endRoom', this.infos[this.params.aile].salles[this.params.salle]);
     }
+  }
+
+  setDone(index) {
+    this.infos[this.params.aile].salles[this.params.salle].oeuvres[index].done = true;
+    this.storage.set('infos', this.infos);
   }
 }

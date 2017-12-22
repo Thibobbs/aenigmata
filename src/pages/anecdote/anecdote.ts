@@ -36,7 +36,11 @@ export class AnecdotePage {
   }
 
   returnToOeuvres() {
-    this.navCtrl.remove(2, 3);
+    if (this.navCtrl.getViews().length == 5) {
+      this.navCtrl.remove(2, 3);
+    } else {
+      this.navCtrl.pop();
+    }
   }
 
 }

@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams, AlertController, Slides } from 'io
 
 //Pages
 import { RecherchePage } from '../recherche/recherche';
+import { AnecdotePage } from '../anecdote/anecdote';
 
 //Provider
 import { NavigationProvider } from '../../providers/navigation/navigation';
@@ -108,7 +109,13 @@ export class OeuvresPage {
 
   checkOeuvre(index) {
     if(!this.infos[this.params.aile].salles[this.params.salle].oeuvres[index].locked) {
-       this.showAlertStart({ 'index': index })
+      if(!this.infos[this.params.aile].salles[this.params.salle].oeuvres[index].done) {
+        this.showAlertStart({ 'index': index });
+      }
+      else {
+        this.params.oeuvre = index;
+        this.navigate.openPage(AnecdotePage, this.params, true);
+      }
     }
   }
 
