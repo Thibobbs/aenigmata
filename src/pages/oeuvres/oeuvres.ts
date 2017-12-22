@@ -50,12 +50,20 @@ export class OeuvresPage {
         this.storage.remove('unlock').then(() => {
           console.log('unlock removed');
         });
-        this.goToUnlock(index);
+        this.showAlertUnlock(index);
+      }
+    });
+    this.storage.get('endRoom').then(index => {
+      if(index != null) {
+        this.storage.remove('endRoom').then(() => {
+          console.log('unlock endRoom');
+        });
+        this.showAlertEndRoom(index);
       }
     });
   }
 
-  showAlert(data) {
+  showAlertStart(data) {
     let params = this.params;
     params.oeuvre = data.index;
 
@@ -72,15 +80,41 @@ export class OeuvresPage {
     alert.present();
   }
 
+  showAlertUnlock(data) {
+    let alert = this.alertCtrl.create();
+    let buttonOptions = {
+      text: 'CONTINUER',
+      handler: () => {
+        console.log('data', data);
+        this.goToUnlock(data+1);
+      }
+    }
+    alert.setTitle('BRAVO !');
+    alert.setSubTitle('Tu as débloqué l\'oeuvre ' + (data + 2));
+    alert.addButton(buttonOptions);
+    alert.present();
+  }
+
+  showAlertEndRoom(data) {
+    let alert = this.alertCtrl.create();
+    let buttonOptions = {
+      text: 'CONTINUER'
+    }
+    alert.setTitle('BRAVO !');
+    alert.setSubTitle('Tu as finis la ' + this.infos[this.params.aile].salles[this.params.salle].name);
+    alert.addButton(buttonOptions);
+    alert.present();
+  }
+
   checkOeuvre(index) {
     if(!this.infos[this.params.aile].salles[this.params.salle].oeuvres[index].locked) {
-       this.showAlert({ 'index': index })
+       this.showAlertStart({ 'index': index })
     }
   }
 
   goToUnlock(index) {
     console.log('slide', index);
-    this.slides.slideTo(index+1, 300);
+    this.slides.slideTo(index, 300);
   }
 
 }

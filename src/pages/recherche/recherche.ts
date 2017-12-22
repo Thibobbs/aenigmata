@@ -97,5 +97,8 @@ export class RecherchePage {
       this.storage.set('infos', this.infos);
       this.storage.set('unlock', index);
     }
+    else {
+      this.storage.set('endRoom', this.infos[this.params.aile].salles[this.params.salle]);
+    }
   }
 }
