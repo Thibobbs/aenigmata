@@ -8,11 +8,13 @@ export const environment = {
           "style": "Peinture italienne",
           "oeuvres": [
             {
-              "name": "Portrait de François 1er",
+              "name": "un Portrait de François 1er",
               "artist": "Tiziano Vecellio",
               "date": 1539,
               "anecdote": "François 1er est de profil sur ce tableau car le peintre s'est servi d'une pièce de monnaie comme modèle.",
-              "img": "Francois.jpg",
+              "indice": "Trouves l'homme qui porte ce médaillon.",
+              "img": "francois1er.jpg",
+              "extract": "francois1er.png",
               "id": "francois",
               "locked": false,
               "done": false
@@ -21,8 +23,10 @@ export const environment = {
               "name": "La Joconde",
               "artist": "Léonard De Vinci",
               "date": "Entre 1503 et 1506",
-              "anecdote": "La Joconde a perdu ces sourcils et ces cils avec le vieillissement de la peinture.",
-              "img": "Joconde.jpg",
+              "anecdote": "La Joconde a perdu ses sourcils et ses cils avec le vieillissement de la peinture.",
+              "indice": "Au-dessus de l’épaule d’une femme se trouve un pont avec des arches.",
+              "img": "joconde.jpg",
+              "extract": "joconde.png",
               "id": "monalisa",
               "locked": true,
               "done": false
@@ -31,8 +35,11 @@ export const environment = {
               "name": "Les noces de Cana",
               "artist": "Véronèse",
               "date": "Entre 1562 et 1563",
-              "anecdote": "Ce tableau immense a été enlevé aux Vénitiens lors de l’une des bataille de Napoléon en Italie. Le Louvre n’a jamais pu rendre le tableau car il est trop grand pour être transporté.",
-              "img": "Cana.jpg",
+//              "anecdote": "Ce tableau immense a été enlevé aux Vénitiens lors de l’une des bataille de Napoléon en Italie. Le Louvre n’a jamais pu rendre le tableau car il est trop grand pour être transporté.",//
+              "anecdote": "Ce tableau immense a été enlevé aux Vénitiens lors de l’une des bataille de Napoléon en Italie. Le Louvre n’a jamais pu rendre le tableau car il est trop grand pour être transporté.",//
+              "indice": "Deux chiens attendent sagement au milieu de l’oeuvre malgré la grande fête qui se déroule.",
+              "img": "cana.jpg",
+              "extract": "cana.png",
               "id": "cana",
               "locked": true,
               "done": false
@@ -47,8 +54,11 @@ export const environment = {
               "name": "La Mort de Sardanapale",
               "artist": "Eugène Delacroix",
               "date": 1827,
-              "anecdote": "Ce chef-d’oeuvre fut refusé par les juges. Très déçu, le peintre cacha son tableau pendant 20 ans avant de le vendre à un collectionneur.  ",
-              "img": "Mort.jpg",
+//              "anecdote": "Ce chef-d’oeuvre fut refusé par les juges. Très déçu, le peintre cacha son tableau pendant 20 ans avant de le vendre à un collectionneur.",//
+              "anecdote": "Ce chef-d’oeuvre fut refusé par les juges. Très déçu, le peintre cacha son tableau pendant 20 ans avant de le vendre à un collectionneur.",//
+              "indice": "Un cheval semble vouloir s’échapper en bas à gauche.",
+              "img": "sardanapale.jpg",
+              "extract": "sardanapale.png",
               "id": "mort",
               "locked": false,
               "done": false
@@ -58,7 +68,9 @@ export const environment = {
               "artist": "Théodore Géricault",
               "date": 1814,
               "anecdote": "Le peintre a copié le cheval d’un autre tableau pour cette oeuvre.",
-              "img": "Cuirassier.jpg",
+              "indice": "Un cheval s’agite et a l’air complètement effray, tout comme son cavalier.",
+              "img": "leCuirassier.jpg",
+              "extract": "leCuirassier.png",
               "id": "corazziere",
               "locked": true,
               "done": false
@@ -67,18 +79,24 @@ export const environment = {
               "name": "La Liberté guidant le peuple",
               "artist": "Eugène Delacroix",
               "date": 1830,
-              "anecdote": "Attention cette oeuvre ne représente pas la Révolution Française de 1789 et Louis XVI n’est pas le dernier roi de France ! Louis XVIII, puis son frère Charles X se succèdent au pouvoir. Ce dernier tente de supprimer la liberté de la presse alors que celle-ci est écrite dans la Constitution : le peuple français se soulève donc lors de cette révolte de 1830.",
-              "img": "Liberte.jpg",
+//              "anecdote": "Attention cette oeuvre ne représente pas la Révolution Française de 1789 et Louis XVI n’est pas le dernier roi de France ! Louis XVIII, puis son frère Charles X se succèdent au pouvoir. Ce dernier tente de supprimer la liberté de la presse alors que celle-ci est écrite dans la Constitution : le peuple français se soulève donc lors de cette révolte de 1830.",//
+              "anecdote": "Attention cette oeuvre ne représente pas la Révolution Française de 1789 et Louis XVI n’est pas le dernier roi de France ! Louis XVIII, puis son frère Charles X se succèdent au pouvoir. Ce dernier tente de supprimer la liberté de la presse alors que celle-ci est écrite dans la Constitution : le peuple français se soulève donc lors de cette révolte de 1830.",//
+              "indice": "Le drapeau français flotte dans un ciel nuageux.",
+              "img": "liberte.jpg",
+              "extract": "liberte.png",
               "id": "liberte",
               "locked": true,
               "done": false
             },
             {
-              "name": "Jeune tigre jouant avec sa mère",
+              "name": "un Jeune tigre jouant avec sa mère",
               "artist": "Eugène Delacroix",
               "date": "Entre 1830 et 1831",
-              "anecdote": "Pour pouvoir observer des tigres, le peintre allait régulièrement au zoo du Jardin des Plantes. Il passait des heures à les observer.",
-              "img": "Tigre.jpg",
+//              "anecdote": "Pour pouvoir observer des tigres, le peintre allait régulièrement au zoo du Jardin des Plantes. Il passait des heures à les observer.",//
+              "anecdote": "Pour pouvoir observer des tigres, le peintre allait régulièrement au zoo du Jardin des Plantes. Il passait des heures à les observer.",//
+              "indice": "Deux tigres sont couchés l'un près de l'autre sur ce tableau.",
+              "img": "tigres.jpg",
+              "extract": "tigres.png",
               "id": "tigre",
               "locked": true,
               "done": false
@@ -93,18 +111,24 @@ export const environment = {
               "name": "Une Odalisque",
               "artist": "Jean-Auguste-Dominique Ingres",
               "date": 1814,
-              "anecdote": "Le peintre a fait cette oeuvre sur commande mais n’a jamais été payé  ! Et oui, le client a perdue toute sa fortune entre temps mais le peintre a quand même livré le tableau.",
-              "img": "Odalisque.jpg",
+//              "anecdote": "Le peintre a fait cette oeuvre sur commande mais n’a jamais été payé  ! Et oui, le client a perdue toute sa fortune entre temps mais le peintre a quand même livré le tableau.",
+              "anecdote": "Le peintre n'a jamais été payé car le client a fait faillite !",
+              "indice": "Un grand rideau bleu turquoise tombe sur le canapé où une femme est couchée.",
+              "img": "odalisque.jpg",
+              "extract": "odalisque.png",
               "id": "odalisque",
               "locked": false,
               "done": false
             },
             {
-              "name": "Sacre de l’Empereur Napoléon 1er et couronnement de l’impératrice Joséphine",
+              "name": "le Sacre de l’Empereur Napoléon 1er et couronnement de l’impératrice Joséphine",
               "artist": "Jacques-Louis David",
               "date": "De 1806 à 1807",
-              "anecdote": "Attention il ne faut pas oublier que c’est un 2 décembre que cette cérémonie de 5h a eu lieu. Les gens avaient très froid sans manteau ! Surtout les femmes qui avaient de belles robes fines.",
-              "img": "Napoleon.jpg",
+//              "anecdote": "Attention il ne faut pas oublier que c’est un 2 décembre que cette cérémonie de 5h a eu lieu. Les gens avaient très froid sans manteau ! Surtout les femmes qui avaient de belles robes fines.",
+              "anecdote": "Cette cérémonie a eu lieu un 2 décembre, les gens avaient donc très froid sans manteau ! Surtout les femmes qui avaient de belles robes fines.",
+              "indice": "La reine est a genoux en bas de marches.",
+              "img": "napoleon.jpg",
+              "extract": "napoleon.png",
               "id": "napoleon",
               "locked": true,
               "done": false
@@ -113,9 +137,24 @@ export const environment = {
               "name": "Le Serment des Horaces",
               "artist": "Jacques-Louis David",
               "date": "De 1784 à 1785",
-              "anecdote": "As-tu remarqué que le chiffre 3 est présent partout ? \n- les 3 soldats\n- les 3 épées\n- les 3 arches\n- les 3 femmes",
-              "img": "Serment.jpg",
+              "anecdote": "As-tu remarqué que le chiffre 3 est présent partout ? - les 3 soldats - les 3 épées - les 3 arches - les 3 femmes",
+              "indice": "Un homme avec une toge rouge soulève 3 épées face à de jeunes hommes.",
+              "img": "horaces.jpg",
+              "extract": "horaces.png",
               "id": "serment",
+              "locked": true,
+              "done": false
+            },
+            {
+              "name": "Madame Vigée Le Brun et sa fille Julie",
+              "artist": "Elisabeth Louise Vigée Le Brun",
+              "date": "1786",
+//              "anecdote": "A l’époque il était très rare d’être une femme  peintre. Cette discipline était réservée aux hommes comme la politique et la médecine.",
+              "anecdote": "A l’époque il était très rare d’être une femme  peintre. Cette discipline était réservée aux hommes comme la politique et la médecine.",
+              "indice": "Trouve la jeune fille assise sur les genoux de sa mère.",
+              "img": "elisabethe.jpg",
+              "extract": "elisabethe.png",
+              "id": "elisabethe",
               "locked": true,
               "done": false
             }
